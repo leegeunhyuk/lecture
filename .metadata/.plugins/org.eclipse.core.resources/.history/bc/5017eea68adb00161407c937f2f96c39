@@ -1,0 +1,74 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class ManageHeight {
+
+	List<Person> list1;
+	List<Person> list2;
+	List<Person> list3;
+	Person p;
+	Scanner keyIn;
+
+	public ManageHeight() {
+		list1 = new ArrayList<Person>();
+		list2 = new ArrayList<Person>();
+		list3 = new ArrayList<Person>();
+		keyIn = new Scanner(System.in);
+	}
+
+	public void addHeight() {
+		int n;
+		System.out.println("Group1");
+		while (true) {
+
+			System.out.print("Ű : ");
+			n = keyIn.nextInt();
+			if (n == 0) {
+				break;
+			}
+			list1.add(p = new Person(n));
+		}
+		System.out.println("Group2");
+		while (true) {
+			System.out.print("Ű : ");
+			n = keyIn.nextInt();
+			if (n == 0) {
+				break;
+			}
+			list2.add(p = new Person(n));
+		}
+		System.out.println("Group3");
+		while (true) {
+			System.out.print("Ű : ");
+			n = keyIn.nextInt();
+			if (n == 0) {
+				break;
+			}
+			list3.add(p = new Person(n));
+		}
+
+	}
+
+	public void printHeight() {
+			System.out.println("group1" );
+			for (int i = 0; i < list1.size(); i++) {
+				System.out.print("Ű : ");
+				System.out.println(list1.get(i));
+			}
+			System.out.println("group2" );
+			for (int i = 0; i < list1.size(); i++) {
+				System.out.print("Ű : ");
+				System.out.println(list2.get(i));
+			}
+			System.out.println("group3" );
+			for (int i = 0; i < list1.size(); i++) {
+				System.out.print("Ű : ");
+				System.out.println(list3.get(i));
+			}
+			
+	}
+	public void aveHeight(){
+		
+	}
+}

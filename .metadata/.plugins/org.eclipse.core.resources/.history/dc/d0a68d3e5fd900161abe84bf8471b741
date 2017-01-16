@@ -1,0 +1,134 @@
+import java.util.Scanner;
+
+public class BookManage {
+	Scanner keyIn;
+
+	public BookManage() {
+		keyIn = new Scanner(System.in);
+	}
+
+	// 1. 도서 검색(도서명)
+	public void searchBookName(Book[] book) {
+		int n = 0;
+		String bookName = new String();
+		System.out.println("[도서 검색(도서명)]");
+		System.out.println("[검색] 도서명을 입력하세요.");
+		System.out.print("> ");
+		bookName = keyIn.nextLine();
+		System.out.println("대여         ID    분류       도서명"); /// 여기서부터 해라
+		System.out.println("============================");
+		while (true) {
+			if (book[n].getName().contains(bookName) == true) {
+				System.out.println(book[n].toString());
+			}
+			n++;
+			if (book[n].getName() == null) {
+				break;
+			}
+		}
+
+	}
+
+	// 2. 도서검색(카테고리)
+	public void searchBookCategory(Book[] book) {
+		int num;
+		int index = book.length;
+		System.out.println("[도서 검색(카테고리)]");
+		System.out.println("[검색] 카테고리를 선택해 주세요.");
+		System.out.println("1.    소설");
+		System.out.println("2.    에세이");
+		System.out.println("3.    잡지");
+		System.out.println("4.    웹툰");
+		System.out.print("> ");
+		while (true) {
+			num = keyIn.nextInt();
+			if (num != 1 && num != 2 && num != 3 && num != 4) {
+				System.out.println("카테고리를 다시 확인해주세요.");
+				continue;
+			} else {
+				System.out.println("대여         ID    분류       도서명");
+				System.out.println("============================");
+				break;
+			}
+		}
+		switch (num) {
+		case 1:
+			for (int i = 0; i < index - 1; i++) {
+				if(book[i].getGroup() == null){break;}
+				if (book[i].getGroup().equals("소설   ")) {
+					System.out.println(book[i].toString());
+				}
+			}
+			break;
+		case 2:
+			for (int i = 0; i < index - 1; i++) {
+				if(book[i].getGroup() == null){break;}
+				if (book[i].getGroup().equals("에세이")) {
+					System.out.println(book[i].toString());
+				}
+			}
+			break;
+		case 3:
+			for (int i = 0; i < index - 1; i++) {
+				if(book[i].getGroup() == null){break;}
+				if (book[i].getGroup().equals("잡지   ")) {
+					System.out.println(book[i].toString());
+				}
+			}
+			break;
+		case 4:
+			for (int i = 0; i < index - 1; i++) {
+				if(book[i].getGroup() == null){break;}
+				if (book[i].getGroup().equals("만화   ")) {
+					System.out.println(book[i].toString());
+				}
+			}
+			break;
+		}
+
+	}
+
+	// 3. 도서 대여
+	// true = 현재 있음     false = 대여중
+	public void rentBook(Book[] book) {
+		String str = new String();
+		int index = book.length;
+		System.out.println("[도서 대여]");
+		System.out.println("[대여] 도서 ID를 입력하세요.");
+		System.out.print("> ");
+		
+		str = keyIn.next();
+		for(int i = 0; i< index;i++){
+			if(book[i].getId() == null) {break;}
+			if(book[i].getId().equals(str) && book[i].getRent() == true){
+				System.out.println("대여가 완료 되었습니다.");
+				book[i].setRent(false);
+				break;
+			}else if(book[i].getId().equals(str) && book[i].getRent() == false){
+				System.out.println("대여할 수 없는 도서입니다. 다시 확인해 주세요.");
+			}
+		}
+	}
+
+	// 4. 도서 반납
+	public void returnBook() {
+		System.out.println("[도서 반납]");
+		System.out.println("[반납] 도서 ID를 입력하세요.");
+		System.out.print("> ");
+
+		// 반납이 완료되면
+		// System.out.println("반납이 완료 되었습니다.");
+		// 반납할 수 없을 때
+		// System.out.println("반납할 수 없는 도서입니다. 다시 확인해 주세요.");
+	}
+
+	// 5. 가장 인기있는 도서
+	public void popularBook() {
+		System.out.println("[가장 인기있는 도서]");
+		System.out.print("ID    |");
+		System.out.print("분류       |");
+		System.out.print("도서명    |");
+		System.out.print("저자       |");
+
+	}
+}

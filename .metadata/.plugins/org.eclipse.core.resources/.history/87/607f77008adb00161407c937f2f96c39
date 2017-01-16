@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class Launcher {
+
+	public static void main(String[] args) {
+		int num;
+		Scanner keyIn = new Scanner(System.in);
+		ManageHeight mh = new ManageHeight();
+		while(true){
+			System.out.println("1.키입력");
+			System.out.println("2.그룹별 키 출력");
+			System.out.println("3.그룹별 평균출력");
+			System.out.println("4.종료");
+			System.out.print("메뉴 : ");
+			num = keyIn.nextInt();
+			switch(num){
+			case 1:
+				mh.addHeight();
+				break;
+			case 2:
+				break;
+			case 3:
+				break;
+			case 4:
+				break;
+			}
+		}
+	}
+}

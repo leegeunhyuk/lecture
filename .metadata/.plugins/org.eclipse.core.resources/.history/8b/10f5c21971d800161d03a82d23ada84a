@@ -1,0 +1,8 @@
+package Poly_v3;
+
+public class Shape {
+	
+	public void draw(){
+		System.out.println("도형을 그리다.");
+	}
+}

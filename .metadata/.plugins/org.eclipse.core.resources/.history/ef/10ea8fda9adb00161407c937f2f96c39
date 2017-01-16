@@ -1,0 +1,10 @@
+package com.java.customer;
+
+public class MapTest {
+
+	public static void main(String[] args) {
+		Customer c1 = new Customer("진강사", "rmsurll");
+		Customer c2 = new Customer("진강사", "rmsurl");
+		
+	}
+}

@@ -1,0 +1,7 @@
+
+public class Art {
+
+	public Art(){
+		System.out.println("Art 생성자 호출");
+	}
+}

@@ -1,0 +1,10 @@
+
+public class PersonTest {
+
+	public static void main(String[] args) {
+		Person p1 = new Person();
+		System.out.println(p1.name + p1.age);
+		p1.age = 10;
+		p1.name = "하이 등신"
+	}
+}

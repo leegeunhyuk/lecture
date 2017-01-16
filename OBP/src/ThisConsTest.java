@@ -1,0 +1,7 @@
+
+public class ThisConsTest {
+
+	public static void main(String[] args) {
+		ThisConsExam test = new ThisConsExam();
+	}
+}

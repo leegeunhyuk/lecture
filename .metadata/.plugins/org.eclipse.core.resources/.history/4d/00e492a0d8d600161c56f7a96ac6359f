@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+public class MyTest {
+
+	public static void main(String[] args) {
+		Scanner keyIn = new Scanner(System.in);
+		int n, index, temp;
+		System.out.print("정수 입력 : ");
+		n = keyIn.nextInt();
+		int [] arr = new int[n];
+		index = arr.length;
+		for(int i = 0; i < index; i++){
+			System.out.print(i + "번째 값 : " );
+			n = keyIn.nextInt();
+			arr[i] = n;
+		}
+		//여기서부터 버블정렬시작
+		boolean flag = false;
+		for(int i = 0; i < index; i++){
+			for(int j = i; j < index-1; j++){
+				
+				if(arr[j] > arr[j+1] && j < index){
+					temp = arr[j];
+					arr[j] = arr[j+1];
+					arr[j+1] = temp;
+				}
+				
+			}
+		}
+		
+		for(int i = 0; i < index; i++){
+			System.out.print(arr[i]);
+		}
+	}
+}

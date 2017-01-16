@@ -1,0 +1,23 @@
+import java.util.HashSet;
+
+public class SetExam {
+	public static void main(String[] args) {
+		HashSet<Person> set = new HashSet<>();
+
+		Person p = new Person("진강사");
+		set.add(p);
+		set.addAll(new Person("박강사"));
+
+		// String str = "Java";
+		//
+		//
+		// set.add(str);
+		// set.add(new String("C"));
+		// set.add(new String("Android"));
+		// set.add(str);
+		// set.add("C");
+		//
+		// System.out.println(set.size());
+		//
+	}
+}

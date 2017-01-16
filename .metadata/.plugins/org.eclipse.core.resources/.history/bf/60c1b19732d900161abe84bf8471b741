@@ -1,0 +1,20 @@
+
+public class Account {
+
+	private int balance;
+	
+	public Account(int balance){
+		this.balance = balance;
+	}
+	
+	public void withdraw(int money){
+		if(this.balance > money){
+			this.balance -= money;
+		}else{
+			throw new OverdraftException("ÀÜ¾× ºÎÁ·");
+		}
+	}
+	public int getBalance(){
+		return this.balance;
+	}
+}

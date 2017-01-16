@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class StudentTest {
+
+	public static void main(String[] args) {
+		Scanner keyIn = new Scanner(System.in);
+		String name;
+		int schoolNumber, kor, eng, math;
+		
+		Student s1 = new Student();
+		System.out.print("이름 입력 : ");
+		name = keyIn.nextLine();
+		s1.setName(name);
+		System.out.print("학번 입력 : ");
+		schoolNumber = keyIn.nextInt();
+		s1.setSchoolNumber(schoolNumber);
+		System.out.print("국어 점수 입력 :");
+		kor = keyIn.nextInt();
+		s1.setKor(kor);
+		System.out.print("영어 점수 입력 :");
+		eng = keyIn.nextInt();
+		s1.setEng(eng);
+		System.out.print("수학 점수 입력 :");
+		math = keyIn.nextInt();
+		s1.setMath(math);
+		System.out.print(s1.getName() + "의 학번은 " + s1.getSchoolNumber() + "이고 국어 영어 수학 점수는 각각" + s1.getKor() + ", " + s1.getEng() + ", " + s1.getMath() + "이다.");
+		keyIn.close();
+	}
+}

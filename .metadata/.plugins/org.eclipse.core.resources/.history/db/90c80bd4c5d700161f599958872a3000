@@ -1,0 +1,13 @@
+
+public class Child extends Parent{
+
+	private int childNum;
+	
+	public Child(){
+		super(10);
+	}
+	
+	public void setChildNum(int childNum){
+		this.childNum = this.num + childNum;
+	}
+}

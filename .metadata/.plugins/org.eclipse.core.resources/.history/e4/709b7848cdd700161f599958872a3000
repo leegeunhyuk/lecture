@@ -1,0 +1,9 @@
+
+public class OverridingExam {
+
+	public static void main(String[] args) {
+		String str = "Java";
+		Integer i = 5;
+		System.out.println(i.toString());
+	}
+}

@@ -1,0 +1,19 @@
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.InputStream;
+
+public class IOExam01 {
+
+	public static void main(String[] args) {
+		try {
+			FileOutputStream fout = new FileOutputStream("data.txt");
+			InputStream in = System.in;
+			fout.write(000000);
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+		// "data.txt" << 이거는 상대 경로다 내프로젝트 안에다 만듬
+		// 만약에 절대 경로면 C:: 이런식으로 싹다 , IO는 checked exception이라서 예외처리 필수
+		
+	}
+}

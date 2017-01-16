@@ -1,0 +1,13 @@
+
+public class WrapperExam {
+	public static void main(String[] args) {
+		Integer i = 10; // Integer i = new Integer(10);
+		int num = i;
+		
+		Long lo = 0L;
+		for(long il = 0; il< Integer.MAX_VALUE; il++){
+			lo += il;
+		}
+		System.out.println("Á¾·á : " + lo);
+	}
+}

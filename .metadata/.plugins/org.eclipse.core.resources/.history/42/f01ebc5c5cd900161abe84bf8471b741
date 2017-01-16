@@ -1,0 +1,29 @@
+import java.util.HashSet;
+
+public class SetExam {
+	public static void main(String[] args) {
+		TreeSet<String> set = new HashSet<>();
+//
+//		Person p = new Person("진강사");
+//
+//		set.add(p);
+//		set.add(new Person("김연아"));
+//		set.add(p);
+//		set.add(new Person("진강사"));
+//		System.out.println(set.size());
+//		System.out.println(set.toString());
+//		
+
+		 String str = "Java";
+		
+		
+		 set.add(str);
+		 set.add(new String("C"));
+		 set.add(new String("Android"));
+		 set.add(str);
+		 set.add("C");
+		
+		 System.out.println(set.size());
+		
+	}
+}

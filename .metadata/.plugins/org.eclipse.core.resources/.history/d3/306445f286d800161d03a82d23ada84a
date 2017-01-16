@@ -1,0 +1,9 @@
+package interexam;
+
+public class Soccer {
+	
+	public void play(){
+		System.out.println("축구를 하다.");
+	}
+
+}

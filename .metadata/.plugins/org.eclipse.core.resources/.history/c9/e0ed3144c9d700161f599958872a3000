@@ -1,0 +1,16 @@
+
+public class InheritanceTest {
+
+	public static void main(String[] args) {
+//		Cartoon c = new Cartoon();
+
+		Child c = new Child();
+		c.print();
+		
+		Parent p = new Parent();
+		p.print();
+		
+		Parent testP = new Child();
+		testP.print();
+	}
+}

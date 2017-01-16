@@ -1,0 +1,119 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.List;
+import java.util.Scanner;
+
+public class ManageStudent {
+	private Student[] student;
+	private List<Student> list;
+	private int id;
+	private Scanner keyIn;
+
+	public ManageStudent() {
+		list = new ArrayList<Student>();
+		student = new Student[100];
+		keyIn = new Scanner(System.in);
+		id = 0;
+	}
+
+	public void addStudent() { ////// 학생 추가
+		String name;
+		int schoolNum, kor, eng, math;
+
+		System.out.print("#이름 : ");
+		name = keyIn.next();
+
+		System.out.print("#학번 : ");
+		schoolNum = keyIn.nextInt();
+
+		System.out.print("#국어 : ");
+		kor = keyIn.nextInt();
+
+		System.out.print("#영어 : ");
+		eng = keyIn.nextInt();
+
+		System.out.print("#수학 : ");
+		math = keyIn.nextInt();
+		student[id] = new Student(name, schoolNum, kor, eng, math);
+		Student std;
+		list.add(std = new Student(name, schoolNum, kor, eng, math));
+		student[id + 1] = new Student();
+		id++;
+		System.out.println("등록완료 ^^");
+	}
+
+	public void searchName() { ///// 이름으로 검색
+		String name;
+		System.out.print("이름 입력 : ");
+		name = keyIn.next();
+		for (int i = 0; i < list.size(); i++) {
+			if (list.get(i).getName().equals(name)) {
+				System.out.println(list.get(i));
+			}
+		}
+
+	}
+
+	public void searchSchoolNumber() { ///// 학번으로 검색
+		int number;
+		System.out.println("학번 입력 : ");
+		number = keyIn.nextInt();
+		for (int i = 0; i < list.size(); i++) {
+			if (list.get(i).getSchoolNum() == number) {
+				System.out.println(list.get(i));
+				return;
+			}
+		}
+		System.out.println("존재하지 않는 학번이에욤");
+	}
+
+	public void deleteStudent() { ///// 학생 삭제
+		int number; // 학번을 입력받았다.
+
+		System.out.print("입력(학번) : ");
+		number = keyIn.nextInt(); // 학번을 입력 받았다.
+
+		for (int i = 0; i < list.size(); i++) {
+			if (number == list.get(i).getSchoolNum()) {
+				list.remove(i);
+				System.out.println("삭제 되었습니다.");
+				return;
+			}
+		}
+		System.out.println("존재하지 않는 학번이에욤");
+
+	}
+
+	public void printStudent() { ///// 전체 출력
+		for (int i = 0; i < list.size(); i++) {
+			System.out.println(list.get(i));
+		}
+	}
+
+	public void printRank() {
+//		Collections.sort((List<T>) list);
+		Collections.sort((List)list);
+		for(int i = 0; i < list.size();i++){
+			System.out.println(list.get(i).toString());
+		}
+		int[] arr = new int[id];
+		for (int i = 0; i < id; i++) {
+			arr[i] = student[i].getSum();
+		}
+		Arrays.sort(arr);
+
+		for (int i = id - 1; i >= 0; i--) {
+			if (i + 1 < id && arr[i] == arr[i + 1]) {
+				continue;
+			}
+			for (int j = id - 1; j >= 0; j--) {
+				if (arr[i] == student[j].getSum()) {
+					System.out.println(student[j].toString());
+				}
+			}
+		}
+	}
+
+}

@@ -1,0 +1,9 @@
+
+public class InheritanceTest {
+
+	public static void main(String[] args) {
+		Child c = new Child();
+		c.setNum(10);
+		System.out.println(c.getNum());
+	}
+}

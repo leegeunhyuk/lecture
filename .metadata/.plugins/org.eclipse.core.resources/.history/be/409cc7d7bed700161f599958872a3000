@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class Fibonacci {
+
+	private int [][] fibo;
+	private Scanner keyIn;
+
+	public Fibonacci(){
+		fibo = new int[2][10000];
+		keyIn = new Scanner(System.in);
+	}
+	
+	public void fiboArray(){   /////dp 테이블 생성
+		fibo[0][0] = 1;
+		fibo[1][0] = 0;
+		fibo[0][1] = 0;
+		fibo[1][1] = 1;
+		for(int j = 2; j < 10000; j++){
+			fibo[0][j] = fibo[0][j - 2] + fibo[0][j - 1];
+			fibo[1][j] = fibo[1][j - 2] + fibo[1][j - 2];
+		}
+	}
+	
+	public void fiboCal(int n){   
+		System.out.println(fibo[0][n] + " " + fibo[1][n]);
+	}
+}

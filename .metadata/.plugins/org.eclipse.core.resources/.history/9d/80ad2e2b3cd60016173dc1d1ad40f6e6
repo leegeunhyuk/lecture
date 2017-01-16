@@ -1,0 +1,43 @@
+
+public class Student {
+
+	private String name;
+	private int schoolNumber;
+	private int kor, eng, math;
+	
+	public void setName(String n){
+		name = n;
+	}
+	public String getName(){
+		return name;
+	}
+	
+	public void setSchoolNumber(int s){
+		schoolNumber = s;
+	}
+	public int getSchoolNumber(){
+		return schoolNumber;
+	}
+	
+	public void setKor(int k){
+		kor = k;
+	}
+	public int getKor(){
+		return kor;
+	}
+	
+	public void setEng(int e){
+		eng = e;
+	}
+	public int getEng(){
+		return eng;
+	}
+	
+	public void setMath(int m){
+		math = m;
+	}
+	public int getMath(){
+		return math;
+	}
+	
+}

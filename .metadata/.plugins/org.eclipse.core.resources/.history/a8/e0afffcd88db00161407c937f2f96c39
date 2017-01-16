@@ -1,0 +1,34 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class ManageHeight {
+
+	List<Integer> list1;
+	List<Integer> list2;
+	List<Integer> list3;
+	Scanner keyIn;
+
+	public ManageHeight() {
+		list1 = new ArrayList<Integer>();
+		list2 = new ArrayList<Integer>();
+		list3 = new ArrayList<Integer>();
+		keyIn = new Scanner(System.in);
+	}
+
+	public void addHeight() {
+		int n;
+		System.out.println("Group1");
+		while (true) {
+			System.out.print("Ű : ");
+			n = keyIn.nextInt();
+			if (n == 0) {
+				break;
+			}
+			list1.add(n);
+		}
+		
+
+	}
+
+}

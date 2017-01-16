@@ -1,0 +1,13 @@
+import java.util.HashSet;
+
+public class RandomNumberMarker {
+	
+	
+	public HashSett<Integer> getSixNumber(){
+		
+	}
+
+	public static void main(String[] args) {
+		
+	}
+}

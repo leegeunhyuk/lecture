@@ -1,0 +1,66 @@
+import java.util.Scanner;
+
+public class StudentLauncher {
+
+	public static void main(String[] args) {
+		Scanner keyIn = new Scanner(System.in);
+		int n;
+		int num = 0;
+		String name;
+		int schoolNum, kor, eng, math;
+		boolean flag;
+		Student [] student = new Student[100];
+		
+		while(true){
+			System.out.println("1.학생 등록");
+			System.out.println("2.학생 검색");
+			System.out.println("3.학생 삭제");
+			System.out.println("4.학생 출력");
+			System.out.println("5.종료");
+			System.out.print("# 메뉴 : ");
+			n = keyIn.nextInt();
+			if(n == 1) {
+				if(num == 99) {
+					System.out.println("초과인원이다!");
+					break;
+				}
+				System.out.print("#이름 : ");
+				name = keyIn.nextLine();
+				System.out.println();
+				System.out.print("#학번 : ");
+				schoolNum = keyIn.nextInt();
+				System.out.println();
+				System.out.print("#국어 : ");
+				kor = keyIn.nextInt();
+				System.out.println();
+				System.out.print("#영어 : ");
+				eng = keyIn.nextInt();
+				System.out.println();
+				System.out.print("#수학 : ");
+				math = keyIn.nextInt();
+				System.out.println();
+				student[num] = new Student(name, schoolNum, kor, eng, math);
+				num++;
+			}else if(n == 4) {
+				flag = true;
+				num = 0;
+				while(true){
+					System.out.println(student[num].getName());
+					System.out.println(student[num].getSchoolNum());
+					System.out.println(student[num].getKor());
+					System.out.println(student[num].getEng());
+					System.out.println(student[num].getMath());
+					num++;
+					if(student[num].getSchoolNum() == 0){break;}
+				}
+			}else if(n == 5) { 
+				break;
+			}
+			else {
+				System.out.println("용납안되는 메뉴 번호다 다시 눌러라");
+				continue;
+			}
+			
+		}
+	}
+}

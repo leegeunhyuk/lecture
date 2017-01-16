@@ -1,0 +1,19 @@
+
+public class InheritanceTest {
+
+	public static void main(String[] args) {
+//		Cartoon c = new Cartoon();
+
+		Child c = new Child();
+		c.print();
+		c.myPrint();
+		System.out.println(c.toString());
+		Parent p = new Parent();
+		p.print();
+		
+		Parent testP = new Child();  // up-casting
+		testP.print();
+		
+		Child testC = (Child)testP; // down-casting
+	}
+}

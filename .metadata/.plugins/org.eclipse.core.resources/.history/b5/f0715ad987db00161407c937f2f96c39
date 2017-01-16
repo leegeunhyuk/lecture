@@ -1,0 +1,13 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class ManageHeight {
+
+	List<Integer> list1; 
+	
+	public ManageHeight(){
+		list1 = new ArrayList<Integer>();
+	}
+	
+	
+}

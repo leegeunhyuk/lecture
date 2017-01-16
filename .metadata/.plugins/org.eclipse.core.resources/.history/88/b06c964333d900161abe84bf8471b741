@@ -1,0 +1,19 @@
+
+public class AccountTest {
+
+	public static void main(String[] args) {
+		
+		Account acc = new Account(10000);
+		try {
+			acc.withdraw(5000);
+			System.out.println(acc.getBalance());
+			acc.withdraw(6000);
+		} catch (OverdraftException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+		
+	}
+}

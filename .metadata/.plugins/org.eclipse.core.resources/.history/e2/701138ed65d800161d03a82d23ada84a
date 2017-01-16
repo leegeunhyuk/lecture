@@ -1,0 +1,10 @@
+package Poly;
+
+public class GraphicsEditor {
+
+	public static void main(String[] args) {
+		Rectangle [] rects = new Rectangle[10];
+		Ellipse [] ells = new Ellipse[10];
+		Line [] lines = new Line[10];
+	}
+}

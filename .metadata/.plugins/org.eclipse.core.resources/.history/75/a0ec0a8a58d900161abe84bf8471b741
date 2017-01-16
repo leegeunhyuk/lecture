@@ -1,0 +1,17 @@
+import java.util.HashSet;
+import java.util.Random;
+
+public class RandomNumberMarker {
+	
+	
+	public HashSet<Integer> getSixNumber(){
+		while(true){
+			Random random = new Random();
+			int number = random.nextInt(44)+1;
+		}
+	}
+
+	public static void main(String[] args) {
+		
+	}
+}

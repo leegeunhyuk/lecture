@@ -1,0 +1,151 @@
+import java.util.Scanner;
+
+public class ManageStudent {
+	private Student[] student;
+	private Student[] rank;
+	private int id;
+	private Scanner keyIn;
+
+	public ManageStudent() {
+		student = new Student[100];
+		rank = new Student[100];
+		keyIn = new Scanner(System.in);
+		id = 0;
+	}
+
+	public void addStudent() { ////// 학생 추가
+		String name;
+		int schoolNum, kor, eng, math;
+
+		System.out.print("#이름 : ");
+		name = keyIn.next();
+
+		System.out.print("#학번 : ");
+		schoolNum = keyIn.nextInt();
+
+		System.out.print("#국어 : ");
+		kor = keyIn.nextInt();
+
+		System.out.print("#영어 : ");
+		eng = keyIn.nextInt();
+
+		System.out.print("#수학 : ");
+		math = keyIn.nextInt();
+		student[id] = new Student(name, schoolNum, kor, eng, math);
+		student[id + 1] = new Student();
+		id++;
+		System.out.println("등록완료 ^^");
+	}
+
+	public void searchName() { ///// 이름으로 검색
+		String name;
+		int n = 0;
+
+		System.out.print("이름 입력 : ");
+		name = keyIn.next();
+		while (true) {
+			if (student[n].getName().equals(name)) {
+				System.out.println(student[n].toString());
+			}
+			n++;
+			if (n == id) {
+				break;
+			}
+		}
+	}
+
+	public void searchSchoolNumber() { ///// 학번으로 검색
+		int number;
+		int n = 0;
+
+		System.out.println("학번 입력 : ");
+		number = keyIn.nextInt();
+		while (true) {
+			if (student[n].getSchoolNum() == number) {
+				System.out.println(student[n].toString());
+			}
+			n++;
+			if (n == id) {
+				break;
+			}
+		}
+	}
+
+	public void deleteStudent() { ///// 학생 삭제
+		int number; // 학번을 입력받았다.
+		int n = 1; //
+		int cnt = 0;
+		int index = student.length;
+		for (int i = 0; i < index; i++) {
+			if (student[i].getSchoolNum() != 0) {
+				cnt++;
+			} else {
+				break;
+			}
+		}
+		System.out.println("student.length : " + cnt);
+		System.out.print("입력(학번) : ");
+		number = keyIn.nextInt(); // 학번을 입력 받았다.
+
+		while (true) {
+			if (number == student[n - 1].getSchoolNum()) { // 학번 == 0번째 1학번 학생
+				for (int i = number - 1; i < cnt - 1; i++) {
+					student[i].setName(student[i + 1].getName());
+					student[i].setSchoolNum(student[i + 1].getSchoolNum());
+					student[i].setKor(student[i + 1].getKor());
+					student[i].setEng(student[i + 1].getEng());
+					student[i].setMath(student[i + 1].getMath());
+					if (i == cnt - 2) {
+						student[i + 1] = new Student();
+					}
+				}
+			} else if (number == student[cnt - 1].getSchoolNum()) {
+				student[number - 1] = new Student();
+			}
+			n++;
+			if (n - 1 == id) {
+				break;
+			}
+
+		}
+
+	}
+
+	public void printStudent() { ///// 전체 출력
+		int n = 0;
+
+		while (true) {
+			if (student[n].getSchoolNum() == 0) {
+				break;
+			}
+			System.out.println(student[n].toString());
+			n++;
+		}
+	}
+
+	public void printRank() {
+		int max = 0;
+		int n = 0; ///// rank배열의 인덱스
+		System.out.println(id);
+		for (int i = 0; i < id; i++) {
+			for (int j = 0; j < id; j++) {
+				max = student[i].getSum() > max ? student[i].getSum() : max;
+			}
+			for (int j = 0; j < id; j++) {
+				if (student[j].getSum() == max) {
+					rank[n].setName(student[j].getName());
+					rank[n].setSchoolNum(student[j].getSchoolNum());
+					rank[n].setKor(student[j].getKor());
+					rank[n].setEng(student[j].getEng());
+					rank[n].setMath(student[j].getMath());
+					rank[n].setSum();
+					n++;
+				}
+			}
+		}
+		for (int i = 0; i < id; i++) {
+			System.out.println(rank[n].toString());
+		}
+	}
+
+}

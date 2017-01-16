@@ -1,0 +1,29 @@
+import java.util.HashSet;
+import java.util.Random;
+
+public class RandomNumberMarker {
+	
+	
+	public HashSet<Integer> getSixNumber(){
+		
+		HashSet<Integer> set = new HashSet<>();
+		
+		while(true){
+			Random random = new Random();
+			int number = random.nextInt(45)+1;
+			set.add(number);
+			if(set.size() == 6){
+				return set;
+			}
+		}
+	}
+
+	public static void main(String[] args) {
+		
+		RandomNumberMarker rand  = new RandomNumberMarker();
+		
+		for(int i = 0; i< 10; i++){
+			System.out.println(rand.getSixNumber());
+		}
+	}
+}

@@ -1,0 +1,18 @@
+
+public class Book {
+
+	private String id;
+	private String group;
+	private String name;
+	private String rent;
+	private String author;
+	
+	public Book(String id, String group, String name, String rent, String author){
+		this.id = id;
+		this.group = group;
+		this.name = name;
+		this.rent = rent;
+		this.author = author;
+	}
+	
+}

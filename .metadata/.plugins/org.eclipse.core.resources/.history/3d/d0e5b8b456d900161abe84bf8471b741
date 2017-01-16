@@ -1,0 +1,6 @@
+
+public class SetExam {
+	public static void main(String[] args) {
+		Hash<String> set = new HashSet<>();
+	}
+}

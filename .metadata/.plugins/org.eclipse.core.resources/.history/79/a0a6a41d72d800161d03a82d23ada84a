@@ -1,0 +1,29 @@
+package Poly_v3;
+
+public class GraphicsEditor {
+
+	public static void main(String[] args) {
+		Shape [] shapes = new Shape[10];
+
+		int num;
+		// 무작위 도형 그리기
+		for (int i = 0; i < 10; i++) {
+			num = (int) (Math.random() * 3) + 1;
+			switch (num) {
+			case 1:// 사각형 생성
+				shapes[i] = new Rectangle();
+				break;
+			case 2:// 원 생성
+				shapes[i] = new Ellipse();
+				break;
+			case 3:// 선 생성
+				shapes[i] = new Line();
+				break;
+			}
+		}
+//		 그려진 도형 확인
+		for (int i = 0; i < 10; i++) {
+			shapes[i].draw();
+		}
+	}
+}

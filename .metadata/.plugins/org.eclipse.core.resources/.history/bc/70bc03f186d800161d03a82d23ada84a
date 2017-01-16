@@ -1,0 +1,12 @@
+package interexam;
+
+public class Test {
+
+	public static void main(String[] args) {
+		Soccer s = new Soccer();
+		Guiter g = new Guiter();
+		
+		s.play();
+		g.play();
+	}
+}

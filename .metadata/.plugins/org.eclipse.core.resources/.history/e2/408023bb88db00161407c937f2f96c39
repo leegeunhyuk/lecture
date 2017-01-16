@@ -1,0 +1,21 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class ManageHeight {
+
+	List<Integer> list1;
+	List<Integer> list2;
+	List<Integer> list3;
+	
+	public ManageHeight(){
+		list1 = new ArrayList<Integer>();
+		list2 = new ArrayList<Integer>();
+		list3 = new ArrayList<Integer>();
+	}
+	
+	public void addHeight(){
+		
+	}
+	
+	
+}

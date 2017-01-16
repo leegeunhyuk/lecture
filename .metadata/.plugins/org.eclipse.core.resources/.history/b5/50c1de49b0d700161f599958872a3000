@@ -1,0 +1,16 @@
+
+public class Parent {
+	protected int num;
+
+	public Parent() {
+	}
+
+	public void setNum(int num) {
+		this.num = num;
+	}
+
+	public int getNum(){
+		return num;
+		
+	}
+}

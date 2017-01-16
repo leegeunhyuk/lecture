@@ -1,0 +1,48 @@
+import java.util.Scanner;
+
+public class StudentLauncher {
+
+	public static void main(String[] args) {
+		Scanner keyIn = new Scanner(System.in);
+		int n;
+		String yesno;
+		boolean flag;
+		ManageStudent ms = new ManageStudent();
+		
+		while(true){
+			System.out.println("1.학생 등록");
+			System.out.println("2.학생 검색");
+			System.out.println("3.학생 삭제");
+			System.out.println("4.학생 출력");
+			System.out.println("5.종료");
+			System.out.print("# 메뉴 : ");
+			n = keyIn.nextInt();
+			
+			if(n == 1){
+				flag = true;
+				while(flag){
+					ms.addStudent();
+					
+					while(flag){
+						System.out.print("계속 등록하시겠습니까? (Y/N)");
+						yesno = keyIn.next();
+						if(yesno == "Y" || yesno == "y"){ 
+							flag = true;
+						}else if(yesno == "N" || yesno == "n"){
+							flag = false;
+						}
+						else {
+							System.out.println("다시 누르시오");
+						}
+					}
+				}
+			}else if(n == 2){
+				
+			}else if(n == 4){
+				ms.printAll();
+			}
+			else if(n == 5) break;
+
+		}
+	}
+}

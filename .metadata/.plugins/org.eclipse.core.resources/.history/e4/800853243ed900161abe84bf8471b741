@@ -1,0 +1,10 @@
+
+public class Test {
+
+	public static void main(String[] args) {
+		Integer a = new Integer(5);
+		Integer ii = 10;
+		System.out.println(ii);
+	}
+}
+

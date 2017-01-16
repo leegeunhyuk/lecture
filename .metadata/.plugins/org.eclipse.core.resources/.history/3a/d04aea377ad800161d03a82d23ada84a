@@ -1,0 +1,5 @@
+package interexam;
+
+public interface IBehavior {
+
+}

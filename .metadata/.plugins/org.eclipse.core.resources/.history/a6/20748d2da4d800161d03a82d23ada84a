@@ -1,0 +1,14 @@
+
+public class Book {
+
+	private String id;
+	private String group;
+	private String name;
+	private String rent;
+	private String author;
+	
+	public Book(String id, String group, String name, String rent, String author){
+		
+	}
+	
+}

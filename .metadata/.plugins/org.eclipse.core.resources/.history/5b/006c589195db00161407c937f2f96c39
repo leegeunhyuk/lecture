@@ -1,0 +1,122 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class ManageHeight {
+
+	private List<Person> list1;
+	private List<Person> list2;
+	private List<Person> list3;
+	private List<List<Person>> list;
+	private Person p;
+	private Scanner keyIn;
+
+	public ManageHeight() {
+		list1 = new ArrayList<Person>();
+		list2 = new ArrayList<Person>();
+		list3 = new ArrayList<Person>();
+		list = new ArrayList<List<Person>>();
+		keyIn = new Scanner(System.in);
+	}
+
+	public void test() {
+		List<Person> listTest;
+		list.add(listTest = new ArrayList<Person>());
+		listTest.add(p = new Person(180));
+		System.out.println(listTest.get(0).getHeight());
+	}
+
+	public void addHeight() {
+		int n = 1;
+		int height;
+		
+		while (true) {
+			List<Person> subList = new ArrayList<Person>();
+			if (n > 3) {
+				break;
+			}
+			System.out.println("group " + n);
+			
+			while(true){
+				System.out.print("Ű : ");
+				height = keyIn.nextInt();
+				if( height == 0) { break; }
+				subList.add(p = new Person(height));
+				list.add(subList);
+			}
+			
+			n++;
+		}
+
+//		 System.out.println("Group1");
+//		 while (true) {
+//		
+//		 System.out.print("Ű : ");
+//		 n = keyIn.nextInt();
+//		 if (n == 0) {
+//		 break;
+//		 }
+//		 list1.add(p = new Person(n));
+//		 }
+//		 System.out.println("Group2");
+//		 while (true) {
+//		 System.out.print("Ű : ");
+//		 n = keyIn.nextInt();
+//		 if (n == 0) {
+//		 break;
+//		 }
+//		 list2.add(p = new Person(n));
+//		 }
+//		 System.out.println("Group3");
+//		 while (true) {
+//		 System.out.print("Ű : ");
+//		 n = keyIn.nextInt();
+//		 if (n == 0) {
+//		 break;
+//		 }
+//		 list3.add(p = new Person(n));
+//		 }
+
+	}
+
+	public void printHeight() {
+		System.out.println("group1");
+		for (int i = 0; i < list1.size(); i++) {
+			System.out.print("Ű : ");
+			System.out.println(list1.get(i).toString());
+		}
+		System.out.println("group2");
+		for (int i = 0; i < list2.size(); i++) {
+			System.out.print("Ű : ");
+			System.out.println(list2.get(i).toString());
+		}
+		System.out.println("group3");
+		for (int i = 0; i < list3.size(); i++) {
+			System.out.print("Ű : ");
+			System.out.println(list3.get(i).toString());
+		}
+
+	}
+
+	public void aveHeight() {
+		int sum = 0;
+		System.out.print("group1 :");
+		for (int i = 0; i < list1.size(); i++) {
+			sum += list1.get(i).getHeight();
+		}
+		System.out.println(((double) sum) / list1.size());
+		sum = 0;
+		System.out.print("group2 :");
+		for (int i = 0; i < list2.size(); i++) {
+			sum += list2.get(i).getHeight();
+		}
+		System.out.println(((double) sum) / list2.size());
+		sum = 0;
+		System.out.print("group3 :");
+		for (int i = 0; i < list3.size(); i++) {
+			sum += list3.get(i).getHeight();
+		}
+		System.out.println(((double) sum) / list3.size());
+
+	}
+}

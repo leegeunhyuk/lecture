@@ -1,0 +1,10 @@
+
+public class WrapperExam {
+	public static void main(String[] args) {
+		Integer i = 10; // Integer i = new Integer(10);
+
+		double da1 = 3.14;
+		double da2 = 1;
+		System.out.println(da1 + da2);
+	}
+}

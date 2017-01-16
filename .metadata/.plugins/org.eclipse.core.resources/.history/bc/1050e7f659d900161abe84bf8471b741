@@ -1,0 +1,24 @@
+import java.util.HashSet;
+
+public class SetExam {
+	public static void main(String[] args) {
+		HashSet<Person> set = new HashSet<>();
+		
+		
+		Person p = new Person("Áø°­»ç");
+		set.add(p);
+		
+		
+//		String str = "Java";
+//		
+//		
+//		set.add(str);
+//		set.add(new String("C"));
+//		set.add(new String("Android"));
+//		set.add(str);
+//		set.add("C");
+//		
+//		System.out.println(set.size());
+//		
+	}
+}

@@ -1,0 +1,10 @@
+
+public class Book {
+
+	private String id;
+	private String group;
+	private String name;
+	private String rent;
+	private String author;
+	
+}

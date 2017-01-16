@@ -1,0 +1,28 @@
+package Poly;
+
+public class GraphicsEditor {
+
+	public static void main(String[] args) {
+		Rectangle[] rects = new Rectangle[10];
+		Ellipse[] ells = new Ellipse[10];
+		Line[] lines = new Line[10];
+
+		System.out.println(rects[2]);
+		int num;
+
+		for (int i = 0; i < 10; i++) {
+			num = (int) (Math.random() * 3) + 1;
+			switch(num){
+			case 1://荤阿屈 积己
+				
+				break;
+			case 2://盔 积己
+				
+				break;
+			case 3://急 积己
+				
+				break;
+			}
+		}
+	}
+}

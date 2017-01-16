@@ -1,0 +1,15 @@
+import java.util.Collections;
+import java.util.Comparator;
+
+public class StudentComparatorNumber implements Comparator<Student> {
+
+	@Override
+	public int compare(Student o1, Student o2) {
+		StudentComparatorRank comp = new StudentComparatorRank();
+		Collections.sort(list, comp);
+		for(int i = 0; i < list.size();i++){
+			System.out.println(list.get(i).toString());
+		}
+	}
+
+}

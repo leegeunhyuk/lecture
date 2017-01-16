@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class StudentLauncher {
+
+	public static void main(String[] args) {
+		Scanner keyIn = new Scanner(System.in);
+		int n;
+		while(true){
+			System.out.print("1.학생 등록");
+			n = keyIn.nextInt();
+			System.out.println("2.학생 검색");
+			System.out.println("3.학생 삭제");
+			System.out.println("4.학생 출력");
+			System.out.println("5.종료");
+			System.out.print("# 메뉴 : ");
+			n = keyIn.nextInt();
+			if(n == 1) {
+				System.out.print("#이름 : ");
+				System.out.print("#학번 : ");
+				System.out.print("#국어 : ");
+				System.out.print("#영어 : ");
+				System.out.print("#수학 : ");
+				
+			}else if(n == 5) { break; }
+		}
+	}
+}

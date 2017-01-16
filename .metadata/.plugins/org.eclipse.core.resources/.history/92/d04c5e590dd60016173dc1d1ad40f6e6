@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class ArrayExam01 {
+
+	public static void main(String[] args) {
+		Scanner keyIn = new Scanner(System.in);
+		
+		int [] ary;
+		int num, index;
+		
+		System.out.print("배열 수를 입력하시오 : ");
+		num = keyIn.nextInt();
+		ary = new int[num];
+		
+		index = ary.length;
+		for(int i = 0; i < index; i++){
+			System.out.print(i + "번째 요소 : ");
+			ary[i] = keyIn.nextInt();
+		}
+		for(int i = 0; i < index; i++){
+			System.out.print(ary[i] + "\t"); //tap만큼 띄어쓰기
+		}
+		
+		
+		keyIn.close();
+	}
+}

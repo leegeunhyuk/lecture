@@ -1,0 +1,18 @@
+
+public class ExceptionTest {
+// 예외의 3가지 처리 방법
+//	1) 예외 복구
+	public static void main(String[] args) {
+
+//	예외 복구
+		int maxRetry = 10;
+		while(maxRetry > 0){
+			try{
+				// 네트워크 장애가 발생할지도 모르는 코드
+				return;// 예외가 없으면
+			}catch(Exception e){
+				
+			}
+		}
+	}
+}
